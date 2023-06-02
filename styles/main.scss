@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+$soft-red: hsl(10, 79%, 65%);
+$cyan: hsl(186, 34%, 60%);
+
+$dark-brown: hsl(25, 47%, 15%);
+$medium-brown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very-pale-orange: hsl(33, 100%, 98%);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+p, a {
+    font-size: 18px;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    transition: color .13s ease-in-out, background-color .13s ease-in-out;
+}
+
+body {
+    background-color: $very-pale-orange;
+}
+
+.expenses-chart-component {
+    max-width: 440px;
+    margin: 0 auto;
+    header, .spending-overview {
+        margin: 20px;
+        padding: 20px;
+    }
+    header {
+        border-radius: 12px;
+        background-color: $soft-red;
+        color: $very-pale-orange;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            font-size: .98rem;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        img {
+            height: 38px;
+        }
+    }
+
+    .spending-overview {
+        background-color: white;
+        border-radius: 12px;
+        h2 {
+            color: $dark-brown;
+        }
+
+        .chart {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            
+            align-items: flex-end;
+            padding-bottom: 20px;
+            border-bottom: 2px solid $very-pale-orange;
+
+            .day-area {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+
+                &:has(.bar:hover) {
+                    .ammount {
+                        opacity: 1;
+                    }
+                }
+
+                .bar {
+                    background-color: $soft-red;
+                    height: 100px;
+                    width: 70%;
+                    border-radius: 4px;
+                    transition: opacity .13s ease-in-out;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        opacity: .8;
+                    }
+                    &.current-day {
+                        background-color: $cyan;
+                    }
+                }
+                .ammount {
+                    font-size: .8rem;
+                    background-color: $dark-brown;
+                    border-radius: 4px;
+                    color: $very-pale-orange;
+                    padding: 4px;
+                    display: inline-block;
+                    margin-bottom: 6px;
+                    opacity: 0;
+                    transition: opacity .13s ease-in-out;
+                }
+    
+                .day {
+                    font-size: .8em;
+                    color: $medium-brown;
+                }
+            }
+            
+            #bar-1 {
+                height: 20px;
+            }
+        }
+        .total-section {
+            padding-top: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            p {
+                font-size: .98rem;
+                color: $medium-brown;
+            }
+            h2 {
+                font-size: 1.9rem;
+                margin-top: 6px;
+            }
+
+            #percentage {
+                font-weight: 700;
+                color: $dark-brown;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.attribution {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    color: $dark-brown;
+    background-color: white;
+    border-radius: 12px;
+    font-size: .96rem;
+    a {
+        color: $soft-red;
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 440px) {
+    .expenses-chart-component {
+        .spending-overview {
+            .total-section h2 {
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .attribution {
+        margin: 20px auto;
+    }
+}
