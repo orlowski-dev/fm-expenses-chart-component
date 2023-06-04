@@ -14,8 +14,6 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 - [Author](#author)
 
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,7 +28,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![mobile design](./preview/mobile-design.png)
+![desktop design](./preview/desktop-design.png)
+![active states](./preview/active-states.png)
 
 
 
@@ -45,12 +45,13 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- jQuery
 
 
 ### What I learned
 
 Important to remember
-```css
+```scss
 &:has(.bar:hover) {
   .ammount {
     opacity: 1;
@@ -58,8 +59,5 @@ Important to remember
 }
 ```
 
-
-
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [@orlowski-dev](https://www.your-site.com)

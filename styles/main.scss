@@ -26,14 +26,22 @@ a {
 }
 
 body {
-    background-color: $very-pale-orange;
+    background-color: $cream;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-wrapper {
+    padding: 20px;
 }
 
 .expenses-chart-component {
     max-width: 440px;
     margin: 0 auto;
     header, .spending-overview {
-        margin: 20px;
         padding: 20px;
     }
     header {
@@ -43,6 +51,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 20px;
 
         h1 {
             font-size: .98rem;
@@ -67,7 +76,7 @@ body {
         }
 
         .chart {
-            margin-top: 40px;
+            margin-top: 10px;
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             text-align: center;
@@ -82,7 +91,7 @@ body {
                 align-items: center;
 
                 &:has(.bar:hover) {
-                    .ammount {
+                    .amount {
                         opacity: 1;
                     }
                 }
@@ -90,10 +99,10 @@ body {
                 .bar {
                     background-color: $soft-red;
                     height: 100px;
-                    width: 70%;
                     border-radius: 4px;
                     transition: opacity .13s ease-in-out;
                     cursor: pointer;
+                    width: 75%;
                     
                     &:hover {
                         opacity: .8;
@@ -102,7 +111,7 @@ body {
                         background-color: $cyan;
                     }
                 }
-                .ammount {
+                .amount {
                     font-size: .8rem;
                     background-color: $dark-brown;
                     border-radius: 4px;
@@ -112,17 +121,16 @@ body {
                     margin-bottom: 6px;
                     opacity: 0;
                     transition: opacity .13s ease-in-out;
+                    display: none;
                 }
     
                 .day {
                     font-size: .8em;
                     color: $medium-brown;
+                    margin-top: 4px;
                 }
             }
-            
-            #bar-1 {
-                height: 20px;
-            }
+
         }
         .total-section {
             padding-top: 20px;
@@ -149,8 +157,8 @@ body {
 }
 
 .attribution {
-    max-width: 400px;
-    margin: 20px;
+    margin-top: 20px;
+    max-width: 440px;
     padding: 20px;
     color: $dark-brown;
     background-color: white;
@@ -168,6 +176,17 @@ body {
         .spending-overview {
             .total-section h2 {
                 font-size: 2.4rem;
+            }
+
+            .chart {
+                .day-area {
+                    .bar {
+                        width: 70%;
+                    }
+                    .amount {
+                        display: inline-block;
+                    }
+                }
             }
         }
     }

@@ -17,7 +17,16 @@ a {
 }
 
 body {
-  background-color: hsl(33, 100%, 98%);
+  background-color: hsl(27, 66%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-wrapper {
+  padding: 20px;
 }
 
 .expenses-chart-component {
@@ -25,7 +34,6 @@ body {
   margin: 0 auto;
 }
 .expenses-chart-component header, .expenses-chart-component .spending-overview {
-  margin: 20px;
   padding: 20px;
 }
 .expenses-chart-component header {
@@ -35,6 +43,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .expenses-chart-component header h1 {
   font-size: 0.98rem;
@@ -55,7 +64,7 @@ body {
   color: hsl(25, 47%, 15%);
 }
 .expenses-chart-component .spending-overview .chart {
-  margin-top: 40px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
@@ -68,16 +77,16 @@ body {
   flex-flow: column;
   align-items: center;
 }
-.expenses-chart-component .spending-overview .chart .day-area:has(.bar:hover) .ammount {
+.expenses-chart-component .spending-overview .chart .day-area:has(.bar:hover) .amount {
   opacity: 1;
 }
 .expenses-chart-component .spending-overview .chart .day-area .bar {
   background-color: hsl(10, 79%, 65%);
   height: 100px;
-  width: 70%;
   border-radius: 4px;
   transition: opacity 0.13s ease-in-out;
   cursor: pointer;
+  width: 75%;
 }
 .expenses-chart-component .spending-overview .chart .day-area .bar:hover {
   opacity: 0.8;
@@ -85,7 +94,7 @@ body {
 .expenses-chart-component .spending-overview .chart .day-area .bar.current-day {
   background-color: hsl(186, 34%, 60%);
 }
-.expenses-chart-component .spending-overview .chart .day-area .ammount {
+.expenses-chart-component .spending-overview .chart .day-area .amount {
   font-size: 0.8rem;
   background-color: hsl(25, 47%, 15%);
   border-radius: 4px;
@@ -95,13 +104,12 @@ body {
   margin-bottom: 6px;
   opacity: 0;
   transition: opacity 0.13s ease-in-out;
+  display: none;
 }
 .expenses-chart-component .spending-overview .chart .day-area .day {
   font-size: 0.8em;
   color: hsl(28, 10%, 53%);
-}
-.expenses-chart-component .spending-overview .chart #bar-1 {
-  height: 20px;
+  margin-top: 4px;
 }
 .expenses-chart-component .spending-overview .total-section {
   padding-top: 20px;
@@ -124,8 +132,8 @@ body {
 }
 
 .attribution {
-  max-width: 400px;
-  margin: 20px;
+  margin-top: 20px;
+  max-width: 440px;
   padding: 20px;
   color: hsl(25, 47%, 15%);
   background-color: white;
@@ -141,6 +149,12 @@ body {
 @media (min-width: 440px) {
   .expenses-chart-component .spending-overview .total-section h2 {
     font-size: 2.4rem;
+  }
+  .expenses-chart-component .spending-overview .chart .day-area .bar {
+    width: 70%;
+  }
+  .expenses-chart-component .spending-overview .chart .day-area .amount {
+    display: inline-block;
   }
   .attribution {
     margin: 20px auto;

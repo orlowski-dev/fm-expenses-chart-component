@@ -1,80 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/main.css">
 
     <title>Frontend Mentor | Expenses chart component</title>
 </head>
+
 <body>
 
-    <section class="expenses-chart-component">
-        <header>
-            <article>
-                <h1>My balance</h1>
-                <h2>$921.48</h2>
-            </article>
-            <div>
-                <img src="images/logo.svg" alt="logo"/>
-            </div>
-        </header>
-        <article class="spending-overview">
-            <h2>Spending - Last 7 days</h2>
-            <section class="chart" id="chart">
-                <div id="day-1" class="day-area">
-                <span id="ammount" class="ammount">$50.29</span>
-                    <div class="bar" id="bar-1"></div>
-                    <span class="day">mon</span>
-                </div>
-                <div id="day-2" class="day-area">
-                    <span id="ammount" class="ammount">$50.29</span>
-                    <div class="bar" id="bar-2"></div>
-                    <span class="day">tue</span>
-                </div>
-                <div id="day-3" class="day-area">
-                    <span id="ammount" class="ammount">$50.29</span>
-                    <div class="bar" id="bar-3"></div>
-                    <span class="day">wed</span>
-                </div>
-                <div id="day-4" class="day-area">
-                    <span id="ammount" class="ammount">$50.29</span>
-                    <div class="bar current-day" id="bar-4"></div>
-                    <span class="day">thu</span>
-                </div>
-                <div id="day-5" class="day-area">
-                    <span id="ammount" class="ammount">$50.29</span>
-                    <div class="bar" id="bar-5"></div>
-                    <span class="day">fri</span>
-                </div>
-                <div id="day-6" class="day-area">
-                    <span id="ammount" class="ammount">$50.29</span>
-                    <div class="bar" id="bar-6"></div>
-                    <span class="day">sat</span>
-                </div>
-                <div id="day-7" class="day-area">
-                    <span id="ammount" class="ammount">$50.29</span>
-                    <div class="bar" id="bar-7"></div>
-                    <span class="day">sun</span>
-                </div>
-            </section>
-            <section class="total-section">
+    <div class="main-wrapper">
+        <section class="expenses-chart-component">
+            <header>
+                <article>
+                    <h1>My balance</h1>
+                    <h2>$921.48</h2>
+                </article>
                 <div>
-                    <p>Total this month</p>
-                    <h2 id="total">$478.33</h2>
+                    <img src="images/logo.svg" alt="logo" />
                 </div>
-                <div class="percentage-area">
-                    <p id="percentage">+2.4%</p>
-                    <p>from last month</p>
-                </div>
-            </section>
-        </article>
-    </section>
+            </header>
+            <article class="spending-overview">
+                <h2>Spending - Last 7 days</h2>
+                <section class="chart" id="chart">
+                    <div id="day-1" class="day-area">
+                        <span id="amount-1" class="amount"></span>
+                        <div class="bar" id="bar-1"></div>
+                        <span class="day">mon</span>
+                    </div>
+                    <div id="day-2" class="day-area">
+                        <span id="amount-2" class="amount"></span>
+                        <div class="bar" id="bar-2"></div>
+                        <span class="day">tue</span>
+                    </div>
+                    <div id="day-3" class="day-area">
+                        <span id="amount-3" class="amount"></span>
+                        <div class="bar" id="bar-3"></div>
+                        <span class="day">wed</span>
+                    </div>
+                    <div id="day-4" class="day-area">
+                        <span id="amount-4" class="amount"></span>
+                        <div class="bar" id="bar-4"></div>
+                        <span class="day">thu</span>
+                    </div>
+                    <div id="day-5" class="day-area">
+                        <span id="amount-5" class="amount"></span>
+                        <div class="bar" id="bar-5"></div>
+                        <span class="day">fri</span>
+                    </div>
+                    <div id="day-6" class="day-area">
+                        <span id="amount-6" class="amount"></span>
+                        <div class="bar" id="bar-6"></div>
+                        <span class="day">sat</span>
+                    </div>
+                    <div id="day-7" class="day-area">
+                        <span id="amount-7" class="amount"></span>
+                        <div class="bar" id="bar-7"></div>
+                        <span class="day">sun</span>
+                    </div>
+                </section>
+                <section class="total-section">
+                    <div>
+                        <p>Total this month</p>
+                        <h2 id="total">$478.33</h2>
+                    </div>
+                    <div class="percentage-area">
+                        <p id="percentage">+2.4%</p>
+                        <p>from last month</p>
+                    </div>
+                </section>
+            </article>
+        </section>
 
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Patryk Orłowski</a>.
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Patryk Orłowski</a>.
+        </div>
     </div>
+    <script src="scripts/jquery-3.7.0.min.js"></script>
+    <script src="scripts/chart.js"></script>
 </body>
+
 </html>
