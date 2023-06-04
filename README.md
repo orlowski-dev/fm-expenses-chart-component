@@ -34,8 +34,8 @@ Users should be able to:
 
 
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/orlowski-dev/fm-expenses-chart-component)
+- Live Site URL: [GitHub Pages](https://orlowski-dev.github.io/fm-expenses-chart-component/)
 
 ## My process
 
